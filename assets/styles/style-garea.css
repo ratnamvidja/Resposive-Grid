@@ -1,0 +1,229 @@
+@font-face {
+    font-family: 'dm_sans9pt_italic';
+    src: url('../fonts/dmsans-italic-variablefont_opszwght-webfont.woff2') format('woff2'),
+         url('../fonts/dmsans-italic-variablefont_opszwght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'dm_sans9pt_regular';
+    src: url('../fonts/dmsans-variablefont_opszwght-webfont.woff2') format('woff2'),
+         url('../fonts/dmsans-variablefont_opszwght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+:root{
+    --body-bg: hsl(0, 0%, 96%);
+    --yellow-100:hsl(31, 66%, 93%);
+    --yellow-500:hsl(39, 100%, 71%);
+    --purple-100:hsl(254, 88%, 90%);
+    --purple-500:hsl(256, 67%, 59%);
+    --white:hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 7%);
+
+    
+}
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+  }
+.text-center{
+    text-align: center;
+}
+
+body{
+    background-color: var(--body-bg);
+    font:18px 'dm_sans9pt_regular';
+    font-weight: 400;
+    
+}
+.box, .yellow_100{
+    background-color:hsl(31, 66%, 93%);
+    padding: 20px;
+    border-radius: 8px;
+      
+}
+.box h2{
+    font-weight: 600;
+    font-size: 2rem;
+}
+.yellow_100 h2 span{
+    color: var(--purple-500)
+}
+.postBtn{
+    background: url(../images/illustration-create-post.webp) no-repeat;
+    width: 158px;
+    height: 75px;
+    border:0;
+    
+}
+.purple_500{
+    background-color:hsl(256, 67%, 59%);
+    
+}
+.purple_500 h2{
+    color: var(--white);
+    font-size: 60px;
+}
+.purple_500 h2 span{
+    color:var(--yellow-500);
+    font-family: 'dm_sans9pt_italic', sans-serif;
+}
+.purple_100{
+    background-color:hsl(254, 88%, 90%);
+   }
+.postBtn:hover{
+    opacity: 0.8;
+}
+
+/* New */
+.postBtn{
+    background: url(../images/illustration-create-post.webp) no-repeat;
+    width: 190px;
+    height: 82px;
+    border:0;
+    background-size: cover;
+    
+}
+
+  .wrapper {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .wrapper h2{
+    margin-bottom: 20px;
+  }
+  .wrapper > div, .one, .six {
+    /* border: 2px solid rgb(233 171 88); */
+    border-radius: 8px;
+    /* background-color: rgb(233 171 88 / 50%); */
+    padding: 1em;
+    /* color: #d9480f; */
+  }
+  
+  .wrapper {
+    max-width: 1200px;
+    margin: 4rem auto;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    gap: 30px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+        'one two two three'
+        'six four five three'
+        'six seven eight eight';
+       
+  }
+  .one{
+    margin-top:0px;
+    grid-area: one;
+    /* grid-row: 1/span 2; */
+    /* height: 65%; */
+  }
+  .wrapper .one-six {
+   border: 0;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 0;
+    display: grid;
+  }
+  
+  .two {
+    grid-area: two;
+  }
+  .two img {
+    width: 190px;
+  }
+  .three {
+    grid-area: three;
+    background-color: var(--purple-100);
+    overflow: hidden;
+  }
+  .three img{
+    width: 350px;
+    margin-bottom: 20px;
+  }
+  .four {
+    background-color: var(--white);
+    grid-area: four;
+    height: 275px;
+    overflow: hidden;
+  }
+  .four img{width: 380px;}
+  .five {
+    background-color: var(--yellow-500);
+    grid-area: five;
+    height: 275px;
+    overflow: hidden;
+  }
+  .five img{
+    width: 205px;
+  }
+  .six{
+    background-color: var(--yellow-500);
+    grid-area: six;
+    /* height: 83%;
+     */
+    margin-bottom: 0px;
+  }
+  .six img{
+    width: 224px;
+    object-fit: cover;
+  }
+  .seven{
+    background-color: var(--white);
+    grid-area: seven;
+    height: 250px;
+
+  }
+  .seven h2{
+    margin-bottom: 30px;
+    font-size: 4rem;
+  }
+  .seven img {width:70%;margin-top: 40px;}
+  .eight{
+    background-color: var(--purple-500);
+    grid-area: eight;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .eight img{
+    width: 230px;
+    height:205px;
+  }
+ .eight h2 {
+    color: var(--white);
+ }
+
+ @media screen and (max-width: 1023px){
+    .wrapper {
+        font-family: var(--fonte-padrao);
+        border-radius: 10px;
+        overflow: hidden;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+    .box{
+        display: flex;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .eight{
+        flex-direction: column;
+        gap: 16px;
+    }
+ }
