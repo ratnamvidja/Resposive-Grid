@@ -115,6 +115,8 @@ body{
     grid-auto-rows: minmax(100px, auto);
     grid-template-areas:
         'one two two three'
+        'one two two three'
+        'one four five three'
         'six four five three'
         'six seven eight eight';
        
@@ -122,8 +124,9 @@ body{
   .one{
     margin-top:0px;
     grid-area: one;
-    /* grid-row: 1/span 2; */
-    /* height: 65%; */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
   }
   .wrapper .one-six {
    border: 0;
